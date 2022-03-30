@@ -5,7 +5,7 @@ import time
 
 
 def play():
-    print('Rock . . .')
+    print('\nRock . . .')
     time.sleep(1)
     print('Paper . . .')
     time.sleep(1)
@@ -75,6 +75,15 @@ def play():
             print('COMPUTER WINS! ... sorry :(')
             break
 
+    # restart game option
+    restart = input('Would you like to play again?:  ')
+    re = restart.lower()
+    if re == 'yes' or re == 'y' or re == 'yeah' or re == 'yah':
+        print('Let\'s go!')
+        play()
+    else:
+        print('Thanks for playing. Come again any time!')
+        quit()
 
 
 def intro():
@@ -96,21 +105,5 @@ def intro():
             continue
 
 
-def outro():
-    restart = input('Would you like to play again?:  ')
-    re = restart.lower()
-    if re == 'yes' or re == 'y' or re == 'yeah' or re == 'yah':
-        print('Let\'s go!')
-        play()
-    else:
-        print('Thanks for playing. Come again any time!')
-
-
 intro()
 play()
-outro()
-
-
-
-
-

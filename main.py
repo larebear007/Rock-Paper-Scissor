@@ -15,7 +15,7 @@ def play():
 
     u_win = 0
     c_win = 0
-    for i in range(5):
+    while True:
         # User choice
         u_choice = None
         while True:
@@ -48,8 +48,8 @@ def play():
         # Record keeping
         print('Computer:', y)
         if u_choice == c_choice:
-            u_win += 1
-            c_win += 1
+            u_win += 0
+            c_win += 0
             print('Tie')
         elif (u_choice == 'r' and c_choice == 's') or (u_choice == 'p' and c_choice == 'r') \
                 or (u_choice == 's' and c_choice == 'p'):
@@ -64,11 +64,8 @@ def play():
 
         print('Score: you', u_win, ', computer', c_win)
 
-        # end game
-        if u_win == 3 and c_win == 3:
-            print('YOU TIED THE COMPUTER!')
-            break
-        elif u_win == 3:
+        # user or computer win
+        if u_win == 3:
             print('YOU WIN!  :) ')
             break
         elif c_win == 3:
